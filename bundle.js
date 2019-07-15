@@ -1,27 +1,26 @@
 "use strict";
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+// operações em array
+var arr = [1, 2, 3, 4, 5, 6]; // map / recebe item e posição
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+var newArr = arr.map(function (item, index) {
+  return item * index;
+});
+console.log(newArr); // reduce - consome o vetor em uma unica variavel ()
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+var soma = arr.reduce(function (total, next) {
+  // retorna soma de total com o seguinte
+  return total + next;
+});
+console.log(soma); // filter
 
-alert('teteteste');
+var filtra = arr.filter(function (item) {
+  // filtra os numerto impares
+  return item % 2 === 0;
+});
+console.log(filtra); // find - Acho objeto
 
-var Teste =
-/*#__PURE__*/
-function () {
-  function Teste() {
-    _classCallCheck(this, Teste);
-  }
-
-  _createClass(Teste, [{
-    key: "metodo",
-    value: function metodo() {}
-  }, {
-    key: "outro",
-    value: function outro() {}
-  }]);
-
-  return Teste;
-}();
+var find = arr.find(function (item) {
+  return item === 5;
+});
+console.log(find);
