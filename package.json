@@ -1,0 +1,16 @@
+{
+    "name": "rocketseat.javascript.E6",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/eduardo-nakamura/rocketseat.javascript.E6.git",
+    "author": "eduardo-nakamura <edu-nakamura@hotmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "@babel/cli": "^7.5.0",
+        "@babel/core": "^7.5.4",
+        "@babel/preset-env": "^7.5.4"
+    },
+    "scripts": {
+        "dev": "babel ./main.js -o ./bundle.js -w"
+    }
+}
