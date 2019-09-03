@@ -1,26 +1,36 @@
 "use strict";
 
-// operações em array
-var arr = [1, 2, 3, 4, 5, 6]; // map / recebe item e posição
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var newArr = arr.map(function (item, index) {
-  return item * index;
-});
-console.log(newArr); // reduce - consome o vetor em uma unica variavel ()
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-var soma = arr.reduce(function (total, next) {
-  // retorna soma de total com o seguinte
-  return total + next;
-});
-console.log(soma); // filter
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var filtra = arr.filter(function (item) {
-  // filtra os numerto impares
-  return item % 2 === 0;
-});
-console.log(filtra); // find - Acho objeto
+// operadores rest
+function soma(a, b) {
+  for (var _len = arguments.length, params = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    params[_key - 2] = arguments[_key];
+  }
 
-var find = arr.find(function (item) {
-  return item === 5;
-});
-console.log(find);
+  return params;
+}
+
+console.log(soma(1, 3, 4, 4, 5, 6, 7));
+
+var teste =
+/*#__PURE__*/
+function () {
+  function teste() {
+    _classCallCheck(this, teste);
+  }
+
+  _createClass(teste, [{
+    key: "metodo",
+    value: function metodo() {}
+  }, {
+    key: "outro",
+    value: function outro() {}
+  }]);
+
+  return teste;
+}();
